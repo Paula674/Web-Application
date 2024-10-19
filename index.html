@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Jewelry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+    <header class="p-3 text-bg-dark sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.jpg" width="50" height="50" alt="Lucky Jewelry Logo"> 
+                <p>LUCKY JEWELRY</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#featuresModal">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</a>
+                </li>
+            </ul>
+            <button type="button" class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            <button type="button" class="btn" style="background-color: green; color: #ffffff;" data-bs-toggle="modal" data-bs-target="#signupModal">Sign-up</button>
+        </div>
+    </nav>
+</header>
+
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content about-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="aboutModalLabel">About Us</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body about-body">
+                At Lucky Jewellery, we believe that every piece of jewelry tells a story. With a passion for 
+                elegance and craftsmanship, we bring you a curated collection of stunning pieces, from timeless 
+                classics to modern designs. Whether you're looking for a gift, a personal keepsake, or something 
+                to shine on your special day, we have something for everyone. Our commitment to quality and 
+                customer satisfaction is at the heart of everything we do, ensuring that your jewelry experience 
+                is as special as the pieces you choose.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="featuresModal" tabindex="-1" aria-labelledby="featuresModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content features-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="featuresModalLabel">Features</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body features-body">
+                At Lucky Jewellery, discover exclusive collections of unique, handcrafted designs made from high-quality materials to ensure 
+                lasting beauty, along with the option to personalize your jewelry. 
+                Enjoy secure payment options, fast shipping, and a dedicated customer support team ready to assist you.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content contact-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body contact-body">
+                We'd love to hear from you! Whether you have questions, 
+                need help with your order, or want to explore custom jewelry options, 
+                feel free to reach out.
+                <ul>
+                    <li>Email: pola@luckyjewellery.com</li>
+                    <li>Phone: +63 994 973 9356</li>
+                    <li>Address: 123 Jewel Street, Gem City, Country</li>
+                    <li>Business Hours: Monday to Friday, 9 AM - 6 PM</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="loginEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember Me</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sign Up Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true"> 
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="signupForm">
+                    <div class="mb-3">
+                        <label for="signupEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="signupEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="signupPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="signupPassword" required>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                        <label class="form-check-label" for="termsCheck">
+                            I agree to the <a href="path/to/terms-and-conditions" target="_blank">terms and conditions</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        alert(`Login attempted with Email: ${document.getElementById('loginEmail').value}`);
+        bootstrap.Modal.getInstance(document.getElementById('loginModal')).hide();
+    });
+
+    document.getElementById('signupForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        alert(`Sign-up attempted with Email: ${document.getElementById('signupEmail').value}`);
+        bootstrap.Modal.getInstance(document.getElementById('signupModal')).hide();
+    });
+</script>
+
+    </header>
+    <h1>
+        <img loading="eager" fetchpriority="high" 
+        src="bg.jpg" 
+        alt="model wearing ethical diamond engagement ring and sustainable jewelry." 
+        class="tw-w-full tw-h-full tw-object-cover" width="1343" height="400">
+    </h1>
+    <h3>
+        “Welcome to Lucky Jewellery — Your Destination for Timeless Elegance.”
+    </h3>
+    <h5>
+        “Discover unique pieces and join countless customers who trust us to 
+        add a touch of luxury to their special moments.”
+    </h5>
+
+        <h3 id="headingThree">
+            <img loading="eager" fetchpriority="high" 
+            src="Gift List.webp" 
+            alt="model wearing ethical diamond engagement ring and sustainable jewelry." 
+            class="tw-w-full tw-h-full tw-object-cover" width="600" height="400">
+        </h3>
+    
+        <div class="video-container">
+            <video class="tw-w-full tw-h-full tw-object-cover tw-mx-auto" preload="auto" playsinline controlslist="nofullscreen nodownload noremoteplayback noplaybackrate" disablepictureinpicture poster="https://cdn.builder.io/api/v1/file/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F33d20cd30c3e41ecb2551f281707a29b">
+                <source media="(max-width: 767px)" src="https://cdn.builder.io/api/v1/file/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F1fb3ae3277ec4f08a2a2b50eced004de" type="video/mp4">
+                <source media="(min-width: 768px)" src="https://cdn.builder.io/api/v1/file/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F33d20cd30c3e41ecb2551f281707a29b" type="video/mp4">
+                <track kind="captions">
+            </video>
+        </div>
+
+</body>
+
+  <h6>
+    Shine in your story, radiate confidence, and adorn yourself with elegance. Discover
+    empowerment woven into each jewel, reflecting your unique journey. Embrace the beauty
+    that mirrors your inner strength and grace, as you wear your power with pride. 
+  </h6>
+
+  <footer style="background-color: #f1f1f1; text-align: center; padding: 20px 0;">
+    <div style="margin-bottom: 20px;">
+        <h4>Quick Links</h4>
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a> |
+        <a href="#">FAQs</a>
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+        <h4>Follow Us</h4>
+        <a href="https://www.facebook.com/paulajean.deocampo" target="_blank">
+            <img src="facebook.png" alt="Facebook" style="width: 24px; margin: 0 5px;">
+        </a>
+        <a href="https://www.tiktok.com/@_polaaginn?_t=8qf7wtUqBtf&_r=1" target="_blank">
+            <img src="TikTok.png" alt="TikTok" style="width: 24px; margin: 0 5px;">
+        </a>
+        <a href="https://www.instagram.com/ocampopaulajean/profilecard/?igsh=OWFpbGs2azh4Ymx6" target="_blank">
+            <img src="Instagram.png" alt="Instagram" style="width: 24px; margin: 0 5px;">
+        </a>
+        <a href="https://t.me/polaaginn" target="_blank">
+            <img src="Telegram.png" alt="Telegram" style="width: 24px; margin: 0 5px;">
+        </a>
+    </div>
+    
+    <div style="margin-bottom: 0;">
+        <h4>Contact Us</h4>
+        <p style="margin: 5px 0;">Email: pola@luckyjewellery.com</p>
+        <p style="margin: 5px 0;">Phone: +63 994 973 9356</p>
+        <p style="margin: 5px 0;">Address: 123 Jewel Street, Gem City, Country</p>
+        <p style="margin: 5px 0;">Business Hours: Monday to Friday, 9 AM - 6 PM</p>
+    </div>
+</footer>
+
+  <footer class="text-center text-lg-start bg-dark text-light mt-3">
+        <div class="container p-4">
+            <div class="text-center p-3">&copy; 2024 Lucky Jewelry | <a">All Rights Reserved</a></div>
+        </div>
+    </footer>
+</html>
